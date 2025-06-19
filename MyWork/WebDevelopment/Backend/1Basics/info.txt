@@ -1,0 +1,8 @@
+to init any app 
+step 1 npm init -y (this will give the package.json)
+
+//to use any  package  we need to first install init
+
+//package.json is the file in which you can find which which package and modules you are using 
+//node_modules have the code and modules of the package use are using
+//package-lock.json is not for developer and for user it is for machine to understand what package we are using
