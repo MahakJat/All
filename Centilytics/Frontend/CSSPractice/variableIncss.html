@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+:root{
+    /* varibles written in the loop can be accessed anywhere in the document */
+    --background-color:grey;
+    --font-color:black;
+    --size-of-height:600px;
+    --size-of-width:600px
+}
+.colors{  
+    /* these variables can be accesed only in the .color class */
+    
+    --gray-color:red;
+}
+body{
+    background-color: var(--background-color);
+}
+p{
+    color: var(--gray-color);
+}
+h5{
+    color: var(--gray-color);
+}
+.box{
+    width: var(--size-of-height);
+    height: var(--size-of-width);
+    background-color: yellow;
+}
+/* to apply the color of the .colors so we have to give .color to that tag and then apply that property */
+
+@media (max-width : 600px){
+    :root{
+        --size-of-height:300px;
+        --size-of-width:300px
+    }
+}
+</style>
+<body>
+    <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt iusto expedita ullam sed harum, maxime veniam explicabo necessitatibus nemo doloribus id a perferendis culpa. Pariatur cum illum quisquam ad.
+    </p>
+        
+    <p class="colors">
+        Lorem ipsum dolor sit amet...
+    </p>
+
+    <p class="colors">
+        Lorem ipsum dolor sit amet...
+    </p>
+
+        <h5 class="colors">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit quae, corporis consequuntur, id totam quod non, ea pariatur recusandae possimus alias facere in quisquam ratione consequatur debitis nemo ducimus?</h5>
+        <h5 class="colors">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit quae, corporis consequuntur, id totam quod non, ea pariatur recusandae possimus alias facere in quisquam ratione consequatur debitis nemo ducimus?</h5>
+        <h5 class="colors">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit quae, corporis consequuntur, id totam quod non, ea pariatur recusandae possimus alias facere in quisquam ratione consequatur debitis nemo ducimus?</h5>
+        <h5 class="colors">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit quae, corporis consequuntur, id totam quod non, ea pariatur recusandae possimus alias facere in quisquam ratione consequatur debitis nemo ducimus?</h5>
+        <h5 class="colors">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit quae, corporis consequuntur, id totam quod non, ea pariatur recusandae possimus alias facere in quisquam ratione consequatur debitis nemo ducimus?</h5>
+    
+    <div class="box">
+
+    </div>
+</body>
+</html>

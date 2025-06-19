@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .d1{
+        background-color: blue;
+        /* justify-self: center; */
+        /* every block is self */
+    }
+    .d2{
+        background-color: orange;
+        /* grid-area:header */
+    }
+    .d3{
+        background-color: #4fabc3;
+        /* grid-area: footer; */
+        /* grid-area:3/1/2/4 ;  */
+        /* first two number are start coordinates and end coordinates*/
+    }
+    .d4{
+        background-color: pink;
+        /* grid-row:2/4 */
+
+    }
+    .d5{
+        background-color: green;
+        /* grid-area: footer; */
+        /* grid-column: 2/5;  */
+        /* grid-column: start / end;
+start: The starting column line where the item should begin.
+end: The ending column line where the item should stop (not included). */
+        /* column starting with the first line and ending with the fourth line  */
+    }
+    .d6{
+        background-color: yellow;
+        /* grid-area: footer; */
+    }
+    .container{
+        font-size:50px;
+        display: grid;
+        /* no. of columns dependent karta hai ki aapne jitne baar 100px */
+        /* grid-template-columns: 100px 100px 100px 100px;   */
+        /* grid-template-rows: 100px 100px 100px ;   */
+
+        /* colums me aa jaye boxes ke form me  */
+        /* char box aayege kyuki char bar 100px likha hai */
+
+        /* grid-template-columns:  auto 50px 10% 2fr 1fr; */
+       /* fr fractions of the total */
+       /* grid-template-row: 2fr 2fr 2fr; */
+
+
+       /* grid-gap:20px 80px;  */
+       /* second wala col gap first row gap */
+       /* grid-column-gap:20px ;
+       grid-row-gap:40px; */
+       
+       align-items: end;
+
+       /* grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr; */
+    
+
+
+       /* grid-template-columns:repeat(3 ,1fr) ; */
+        /* same property will be applied on 3 blocks  */
+
+        /* grid-template-columns: repeat(3,minmax(99px)); */
+        grid-template-columns: repeat(auto-fill,minmax(60px));
+        grid-template-rows: 1fr 1fr 1fr ;
+       grid-template-areas:
+       "header header header"
+       "advert content content" 
+       "footer footer footer"  ;
+       }
+    /*
+    Breakdown of grid-template-columns: auto 50px 10% 2fr 1fr;
+auto: The column width is determined by the content inside it.
+50px: This column has a fixed width of 50 pixels.
+10%: This column takes up 10% of the grid container’s total width.
+2fr: This column takes up 2 fractions of the remaining space.
+1fr: This column takes up 1 fraction of the remaining space. 
+     */
+     .flex_box{
+        display: flex;
+        gap: 20px;
+        /* flex-wrap: wrap; */
+     }
+     
+     /* flex grow me height nhi dete hai */
+     .c {
+    height: 50px; 
+    /* flex-grow: 1; */
+    background-color: yellow;
+    flex-basis: 10em; 
+    /* flex-basis for initial size */
+}
+
+     #c1{
+        /* flex-shrink: 0; */
+        /* flex-grow: 1; */
+        order:2;
+        flex-basis: 10em;
+     }
+     #c2{
+       flex-grow: 4;
+       flex-basis: 20em;
+       order:1;
+     }
+</style>
+<body>
+    <!-- <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+        <div class="d6">6</div>
+    </div> -->
+
+
+    <div class="flex_box">
+        <div class="c" id = "c1">1</div>
+        <div class="c" id = "c2">2</div>
+        <!-- <div class="c" id = "c3"></div>
+        <div class="c" id = "c4"></div>
+        <div class="c" id = "c5"></div>
+        <div class="c" id = "c6"></div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative; /* Acts as a reference for absolute positioning */
+            height: 1500px; /* Added height for scrolling effect */
+            background: linear-gradient(white, lightblue);
+            padding: 10px;
+        }
+
+        /* Static Position (Default) */
+        .static-box {
+            position: static; /* Default behavior */
+            background-color: lightgray;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Relative Position */
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        /* Absolute Position */
+        .absolute-box {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        /* Fixed Position */
+        .fixed-box {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: lightblue;
+            padding: 10px;
+            font-weight: bold;
+            z-index: 20;
+        }
+
+        /* Sticky Position */
+        /* sticky scrolls in the same page  and sticks in the for the next page */
+        .sticky-box {
+            position: sticky;
+            top: 40px;
+            background-color: orange;
+            padding: 10px;
+            z-index: 40;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="static-box">This is a static positioned box (Default behavior).</div>
+
+    <div class="relative-box">This is a relative positioned box (Moves 20px right and down).</div>
+
+    <div class="absolute-box">This is an absolute positioned box (Positioned inside `.container`).</div>
+
+    <div class="fixed-box">This is a fixed positioned box (Always in the top-right corner).</div>
+
+    <div class="sticky-box">This is a sticky positioned box (Sticks at the top when scrolling).</div>
+
+    <div class="container">
+        Scroll down to see the sticky effect in action.  
+        The fixed box will always stay in the top-right corner.  
+        The absolute box is positioned relative to `.container`.
+    </div>
+
+</body>
+</html>

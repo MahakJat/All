@@ -1,0 +1,24 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    background-color: rgb(7, 52, 46);
+    color: white;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+}

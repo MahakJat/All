@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Caveat:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+   <style>
+    /* color are in rgb hexcode rgba red green blue alpha (specifies the opacity of the object) */
+    .pink{
+        color: pink;
+    }
+    .red{
+        color: red!important;  
+        /* !important makes the property important will apply over all  the other properties */
+        /* agar hum dono color ek class ko dege toh red will overwrite the pink */
+    }
+    #blue{
+        color:blue; 
+        /* id is applied over all the class does not matter position
+        and inline css have more emphaises then id
+         */
+    }
+    [type = 'radio']{
+        margin-top: 30px;
+    }
+    [type = "checkbox"]{
+        margin-left: 50px;
+    }
+    .border-property{
+        border-color: red;
+        border-width:  2px;
+        border-style: solid;
+        border-radius: 5px;
+        
+    }
+     h2{
+        font-family: monospace;
+        background-color: yellow;
+     
+     }
+     p{
+        font-family: Lobster , monospace; 
+        /* the second one is the default font if you first font doesn't work then the monospace will work */
+     }
+     #para{
+        color:green;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+line-height: 1.5;
+
+     }
+     main{
+        background-color: navy;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding: 20px 10px 30px 50px;
+     }
+
+ p{
+    font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+
+ }
+   </style>
+<body>
+    <h1 class="border-property" style ="color:red">cat photo app</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veritatis, adipisci eos libero expedita autem amet! Similique labore corporis dolorem!</h2>
+   <main style="text-align: center;">
+    <p style="color:blue; background-color:yellow" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe facilis hic commodi quidem assumenda vitae, explicabo nam possimus laudantium esse nesciunt molestias corrupti? Nemo enim totam dignissimos maiores odit!</p>
+    <p id = "para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sed veritatis molestias suscipit esse delectus et. Quod reiciendis corrupti rem id, distinctio iure illum ab pariatur voluptatibus, optio quidem aspernatur.</p>   
+    <form action="">
+        <label for="">Gender</label>
+        <input type="radio" name="" id="" >
+
+        <label for="">Hello</label>
+        <input type="checkbox">
+    </form>
+
+    <p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quos ipsa dignissimos iure laudantium porro, exercitationem officia quam nisi iste.
+    </p>
+  
+</main>
+<ol style="list-style-type: circle;">
+    <li>items</li>
+    <li>items</li>
+    <li>items</li>
+    <li>items</li>
+    <li>items</li>
+</ol>
+
+<!-- agar hum koi property hum parent pe lagate hai toh automatically child pe bhi apply ho jati hai -->
+
+<p class="pink red" id ="blue" style ="color:yellow ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto facere aut harum quam, saepe impedit exercitationem inventore velit id, reiciendis deserunt alias vel, earum delectus perferendis cupiditate dolores voluptatem?</p>
+
+
+<div style="box-shadow: 5px 5px 10px gray; width: 300px; height: 300px; background: linear-gradient(to right, red, blue);
+;
+"></div>
+
+</body>
+</html>

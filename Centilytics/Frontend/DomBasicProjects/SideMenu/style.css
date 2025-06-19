@@ -1,0 +1,39 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}   
+
+body{
+    overflow: hidden;
+}
+nav{
+    background-color: rgb(44, 124, 156);
+    padding: 2rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.close{
+    display: none;
+}
+.slide_div{
+    width: 30%;
+    height: 100vh;
+    background-color: rgb(44, 124, 156);
+    position: absolute;
+    left: 100%;
+    transition: all ease 0.2s;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    padding-top: 10vh;
+
+}

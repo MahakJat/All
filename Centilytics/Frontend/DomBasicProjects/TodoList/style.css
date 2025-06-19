@@ -1,0 +1,84 @@
+/* #F5F5F5 */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+    background-color: #FFFFFF;
+    padding: 2rem;
+    width: fit-content;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.222);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.container h1{
+    text-align: center;
+    padding: 1rem;
+}
+.input-tag-and-Addbtn{
+    display: flex;
+    align-items: center;
+}
+.input-div{
+    padding: 0.75rem 1rem;
+    width: 30vw;
+    border: 1px solid rgba(0, 0, 0, 0.194);
+}
+.input-div input{
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.add-btn{
+    background-color: #2877d7;
+    color:white;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+/* task container */
+.task-container{
+  padding: 1.25rem 0rem;
+  height: 50vh;
+  overflow-y: auto;
+
+}
+.task-container::-webkit-scrollbar {
+    display: none;
+}
+.task-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.50rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.131);
+    
+}
+.close-btn{
+    border-radius: 50%;
+    border: none;
+    padding: 0.25rem 0.26rem;
+    background-color: rgba(255, 0, 0, 0.628);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}

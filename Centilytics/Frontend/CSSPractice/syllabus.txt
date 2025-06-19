@@ -1,0 +1,52 @@
+1. Basics 
+2. Syntax 
+3. Inline, Internal and External CSS 
+4. Comments 
+5. Selectors 
+6. Colors 
+7. Background 
+8. Border 
+9. Margins 
+10.Padding 
+11. Height / Width 
+12.Box Model 
+13.Text 
+14.Links 
+15.Fonts 
+16.Display ( Flex-box, Grid ) 
+17.Position 
+18.Pseudo Classes 
+19.Pseudo Elements 
+20.Counters 
+21.Units 
+22.Specificity 
+23.Box Shadows 
+24.Gradients 
+25.Responsiveness 
+26.Properties / Variables 
+27.Animations / Keyframes 
+28.Viewport 
+29.Embedding External Fonts 
+
+
+
+
+Types of selectors:
+
+Universal Selector (*) – Targets all elements.
+Element Selector (h1, p) – Targets specific elements.
+Class Selector (.class) – Targets elements with a specific class.
+ID Selector (#id) – Targets a unique element by ID.
+Attribute Selector (input[type="text"]) – Targets elements based on attributes.
+Group Selector (h1, p {}) – Groups multiple selectors.
+Child Selector (div > p) – Targets direct child elements.
+
+
+
+ Specificity
+Determines which styles take precedence.
+
+/* ID > Class > Element */
+#id-selector { color: red; } /* Highest specificity */
+.class-selector { color: blue; }
+p { color: green; } /* Lowest specificity */

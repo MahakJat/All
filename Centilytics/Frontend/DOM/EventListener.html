@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div>
+        <button onclick="console.log('button clicked')"> click button</button>
+        <button onclick="displayMsg(event)">function call</button>
+        <button class="btn">new button</button>
+
+        <!-- when an even occur the web browser passed an event object to the even handler -->
+    </div>
+ </body>
+    <script>
+         function displayMsg(event){
+            console.log("function call")
+            console.log(event.type)
+            console.log(event.target)
+            console.log(event)
+         }
+
+         let btn = document.querySelector(".btn");
+         btn.onclick  = function(){
+            console.log(this); //refers to the target element
+            console.log(this.className); 
+         }
+    </script>
+ </html>

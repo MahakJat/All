@@ -1,0 +1,46 @@
+ In JavaScript, the test() method is used with regular expressions to check if a pattern exists in a given string. It returns a boolean value (true or false).
+
+regex.test(string)
+regex → A regular expression object.
+string → The string to test against the regex.
+ 
+ 
+ 
+ const containNumber = /\d/;
+ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^\d{10}$/;
+
+containNumber = /\d/;
+
+This is a regular expression (RegExp) that checks if a string contains at least one digit (\d).
+\d matches any digit from 0 to 9.
+Example:
+
+containNumber.test("Hello123"); // true (contains numbers)
+containNumber.test("Hello");    // false (no numbers)
+emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+This regular expression is used to validate email formats.
+^[^\s@]+ → Starts with one or more characters that are not spaces (\s) or @.
+@ → Requires exactly one @ symbol.
+[^\s@]+ → Ensures there's text after @ that doesn't contain spaces or @.
+\. → Matches a dot (.) before the domain extension.
+[^\s@]+$ → Ensures the domain extension consists of characters other than spaces or @ till the end.
+Example:
+
+emailRegex.test("example@email.com"); // true (valid email)
+emailRegex.test("example@.com");      // false (invalid email)
+emailRegex.test("example@com");       // false (invalid email)
+phoneRegex = /^\d{10}$/;
+
+This regular expression validates a 10-digit phone number.
+^\d{10}$:
+^ → Start of the string.
+\d{10} → Matches exactly 10 digits (0-9).
+$ → End of the string.
+Example:
+
+phoneRegex.test("9340660954");  // true (valid 10-digit number)
+phoneRegex.test("123456");      // false (less than 10 digits)
+phoneRegex.test("12345678901"); // false (more than 10 digits)
+phoneRegex.test("12345abcde");  // false (contains non-numeric characters)

@@ -1,0 +1,50 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 40%;
+    background-color: white;
+    padding: 2rem;  
+    text-align: right;
+}
+.progress_bar{
+    width: 100%;
+    background-color: grey;
+    height: 0.5rem;
+    border-radius: 1rem;
+}
+.progress{
+    height: 100%;
+    width: 0%;
+    background-color: green;
+    border-radius: 1rem;
+}
+button{
+    background-color: green;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 0.5em 1.7em;
+    border-radius: 1.5em;
+    cursor: pointer;
+    scale: 1;
+    transition: all ease 0.5s;
+}
+button:hover{
+    scale: 1.2;
+}

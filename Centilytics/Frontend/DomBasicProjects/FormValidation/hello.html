@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f8fa;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .form-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-header h1 {
+            color: #052e36;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        form {
+            background: #ffffff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #052e36;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #052e36;
+            box-shadow: 0 0 0 2px rgba(5, 46, 54, 0.2);
+        }
+        
+        .input-group input::placeholder {
+            color: #aaa;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .input-group.error input {
+            border-color: #e74c3c;
+        }
+        
+        .input-group.error .error-message {
+            display: block;
+        }
+        
+        button {
+            background-color: #052e36;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #074453;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 40px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 10px;
+            }
+            
+            form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Create Your Account</h1>
+                <p>Please fill in the details to get started</p>
+            </div>
+            <form id="signupForm">
+                <div class="input-group" id="nameGroup">
+                    <label for="username">Full Name</label>
+                    <input type="text" placeholder="Enter your name" name="username" id="username">
+                    <span class="error-message">Please enter a valid name</span>
+                </div>
+                
+                <div class="input-group" id="emailGroup">
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Enter email address" name="email" id="email">
+                    <span class="error-message">Please enter a valid email address</span>
+                </div>
+                
+                <div class="input-group" id="phoneGroup">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number" name="phoneNumber" id="phoneNumber">
+                    <span class="error-message">Please enter a valid phone number</span>
+                </div>
+                
+                <div class="input-group" id="passwordGroup">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter password" name="password" id="password">
+                    <span class="password-toggle" id="togglePassword">Show</span>
+                    <span class="error-message">Password must be at least 8 characters</span>
+                </div>
+                
+                <div class="input-group" id="confirmPasswordGroup">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" placeholder="Confirm password" name="confirmPassword" id="confirmPassword">
+                    <span class="password-toggle" id="toggleConfirmPassword">Show</span>
+                    <span class="error-message">Passwords do not match</span>
+                </div>
+                
+                <button type="submit" id="submitBtn">Create Account</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('signupForm');
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const phoneNumber = document.getElementById('phoneNumber');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            const togglePassword = document.getElementById('togglePassword');
+            const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+            
+            // Toggle password visibility
+            togglePassword.addEventListener('click', function() {
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                this.textContent = type === 'password' ? 'Show' : 'Hide';
+            });
+            
+            toggleConfirmPassword.addEventListener('click', function() {
+                const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+                confirmPassword.setAttribute('type', type);
+                this.textContent = type === 'password' ? 'Show' : 'Hide';
+            });
+            
+            // Form validation
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                
+                // Validate username
+                if (username.value.trim() === '' || username.value.length < 2) {
+                    showError(username, 'nameGroup', 'Please enter a valid name');
+                    isValid = false;
+                } else {
+                    removeError(username, 'nameGroup');
+                }
+                
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    showError(email, 'emailGroup', 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    removeError(email, 'emailGroup');
+                }
+                
+                // Validate phone
+                const phoneRegex = /^\d{10,15}$/;
+                if (!phoneRegex.test(phoneNumber.value.replace(/\D/g, ''))) {
+                    showError(phoneNumber, 'phoneGroup', 'Please enter a valid phone number');
+                    isValid = false;
+                } else {
+                    removeError(phoneNumber, 'phoneGroup');
+                }
+                
+                // Validate password
+                if (password.value.length < 8) {
+                    showError(password, 'passwordGroup', 'Password must be at least 8 characters');
+                    isValid = false;
+                } else {
+                    removeError(password, 'passwordGroup');
+                }
+                
+                // Validate confirm password
+                if (password.value !== confirmPassword.value) {
+                    showError(confirmPassword, 'confirmPasswordGroup', 'Passwords do not match');
+                    isValid = false;
+                } else {
+                    removeError(confirmPassword, 'confirmPasswordGroup');
+                }
+                
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    form.reset();
+                }
+            });
+            
+            // Helper functions
+            function showError(input, groupId, message) {
+                const group = document.getElementById(groupId);
+                group.classList.add('error');
+                const errorMessage = group.querySelector('.error-message');
+                errorMessage.textContent = message;
+            }
+            
+            function removeError(input, groupId) {
+                const group = document.getElementById(groupId);
+                group.classList.remove('error');
+            }
+        });
+    </script>
+</body>
+</html>
