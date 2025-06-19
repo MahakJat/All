@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    html{
+        font-size: 20px;
+    }
+    body{
+        background-color:#d7d4d4 ;
+       
+    }
+    .parent{
+        width: 70%;
+        background-color: #ffff;
+        padding: 2em;
+        margin: auto;
+    }
+   .parent h2{
+        text-transform: uppercase;
+        color:#cc5c17;
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    .child{
+        background-color: #cc5c17;
+        padding: 2em;
+    }
+    .child h2{
+        color: white;
+        font-weight: 800;
+        font-size: 2rem;
+    }
+    button{
+       background-color: white;
+       border: none;
+       padding: 1em 2em;
+    }
+    @media (max-width:800px){
+        html{
+            font-size: 12px;
+        }
+    }
+</style>
+<body>
+    <div class="parent">
+        <i><h2>why em can be dangarous</h2></i>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eligendi fuga rerum amet eos, voluptas ipsa, enim temporibus, officiis asperiores dolorum numquam est expedita? Odit modi veniam rerum ipsa aliquid.</p>
+        <div class="child">
+            <h2>buy our product</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor hic vero tenetur perferendis maxime deleniti eius possimus, modi libero temporibus voluptates earum. Repellat, voluptas harum voluptatem inventore itaque nostrum quo.</p>
+            <button>Buy now</button>
+        </div>
+    </div>
+</body>
+</html>

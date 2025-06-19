@@ -1,0 +1,15 @@
+Syntax
+array.reduce(callback(accumulator, currentValue, index, array), initialValue)
+
+Parameters:
+callback: A function that runs for each element in the array.
+
+accumulator: The value returned from the previous iteration (or the initialValue for the first).
+
+currentValue: The current element being processed.
+
+index (optional): Index of the current element.
+
+array (optional): The original array.
+
+initialValue (optional but recommended): Initial value for the accumulator.

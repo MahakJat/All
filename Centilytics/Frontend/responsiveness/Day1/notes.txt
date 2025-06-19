@@ -1,0 +1,12 @@
+work with % to make the websites responsive avoid giving heights and width fixed values
+
+em font size is related to parent fontsize if no font on parent then default is 16px 
+in em for margin and padding it looks for current div font sizee
+
+rem look for the font size of root that is html
+
+
+em and rem use karne se hum media query me sirf ek jagah change 
+karge toh sare pages ke font size change ho jata hai rather then har ek element me alag change
+
+use of vh vw for title is really good because it change on changing the viewport (use vh more not vw because the font may become too small on making view port small)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 20px;
+        }
+        .em_class{
+          font-size: 1em; 
+          /* em takes the font-size of its parent */
+        }
+        .rem_class{
+            font-size: 1rem;
+            /* rem takes the font-size of the root that html (16px = 1 rem) */
+        }
+        .em_class_1_div{
+            font-size: 40px;
+        }
+        .em_class_1{
+            font-size: 20px;
+            padding: 1em 2em;
+            /* in class of margin and padding the em values refer to the current tag that para tag here 1em = 20px not that of its parent div ie font-size:40px */
+        }
+    </style>
+</head>
+  
+<body>
+    <div>
+        <p class="em_class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, nesciunt.</p>
+        <p class="rem_class" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, nesciunt.</p>
+    </div>
+
+    <div class="em_class_1_div">
+          <p class="em_class_1">
+            <!--  -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam in, consequuntur, cumque totam aut consequatur quia eveniet vel dicta veniam nisi debitis incidunt numquam quae, iusto molestiae perferendis quos architecto!
+          </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Rubik:300,700');
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:'Rubik' ,sans-serif;
+    }
+   
+    .main{
+       background:linear-gradient(to left ,#83a4d4,#b6fbff) ;
+       padding: 5em;
+       /* height: 100vh; */
+       /* width: 80vw; */
+       /* width: 50vmax;  */
+       /* width: 50vmin; */
+       /* 50% of viewport max */
+      
+    }
+    .grid{
+        display: flex;
+    }
+    .col{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .col-title{
+        font-weight: 900;
+        color: #457BAC;
+        text-transform: uppercase;
+        /* font-size: 10vh; */
+        /* font-size: 5vw; */
+        /* font-size: 10vmax; */
+        /* font-size: 10vmin;errd56j */
+    }
+    a{
+        background-color: #457BAC;
+        border: none;
+        color:white;
+        padding: 1em 2em;
+        text-decoration: none;
+    } 
+    .img-div img{
+        width: 50%;
+        
+        box-shadow: 3px 3px 25px 5px  rgba(0, 0, 0, .5);
+        
+    }
+</style>
+<body>
+    <div class="main">
+         <div class="grid">
+            <div class="col">
+                <h1 class="col-title">
+                    using vh and vw
+                </h1>
+                <p class="col-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente enim pariatur corrupti aut eos? Similique quia voluptatum delectus illum quos numquam aliquam explicabo quam placeat sint, porro labore exercitationem excepturi fugiat minima assumenda maxime tempora error, eaque sapiente est facere. 
+                </p>
+                <div>
+                    <a href="">Buy now!</a>
+                </div>
+            </div>
+            <div class="img-div">
+               <img src="https://images.unsplash.com/photo-1740398864002-99d4347d5190?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">    
+                   </div>
+         </div>
+    </div>
+    <img style="width: 100%; height:100%;" src="https://images.unsplash.com/photo-1740398864002-99d4347d5190?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">    
+
+</body>
+</html>

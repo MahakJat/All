@@ -1,0 +1,1 @@
+xhr.send() comes last because it fires the request after everything is properly configured
