@@ -1,0 +1,72 @@
+In React (and JavaScript in general), shallow copy and deep copy are important concepts when working with state to avoid unintended mutations.
+
+🔄 Shallow Copy
+📌 Arrays:
+A shallow copy duplicates the first level, but nested objects/arrays are still references.
+
+✅ Ways to shallow copy an array:
+js
+Copy
+Edit
+const originalArray = [1, 2, 3];
+const copy1 = [...originalArray]; // spread operator
+const copy2 = originalArray.slice(); // slice method
+const copy3 = Array.from(originalArray); // Array.from
+✅ Use in React state: Good if the array contains only primitives or you're not modifying nested items.
+
+📌 Objects:
+js
+Copy
+Edit
+const originalObject = { a: 1, b: 2 };
+const copy1 = { ...originalObject }; // spread
+const copy2 = Object.assign({}, originalObject); // Object.assign
+⚠️ If the object has nested structures, the nested objects are still references (shallow copy).
+
+🧠 Deep Copy
+A deep copy creates a new copy of everything, including nested objects or arrays.
+
+✅ Arrays and Objects:
+Option 1: structuredClone() (Recommended for simple use cases, built-in)
+js
+Copy
+Edit
+const deepCopied = structuredClone(originalData);
+Option 2: JSON methods (Works if data has no functions, undefined, or circular references)
+js
+Copy
+Edit
+const deepCopied = JSON.parse(JSON.stringify(originalData));
+Option 3: Lodash
+bash
+Copy
+Edit
+npm install lodash
+js
+Copy
+Edit
+import _ from 'lodash';
+
+const deepCopied = _.cloneDeep(originalData);
+💡 React Example (State Copying)
+js
+Copy
+Edit
+const [user, setUser] = useState({ name: "John", address: { city: "NY" } });
+
+// ❌ Direct mutation - DO NOT DO THIS
+user.address.city = "LA";
+setUser(user); // Won't trigger re-render properly
+
+// ✅ Shallow copy (bad for nested)
+const updatedUser = { ...user };
+updatedUser.address.city = "LA"; // Still mutating nested object
+
+// ✅ Deep copy
+const updatedUser = structuredClone(user);
+updatedUser.address.city = "LA";
+setUser(updatedUser);
+✅ When to Use What?
+Copy Type	Use Case
+Shallow Copy	Flat data structures, simple updates
+Deep Copy	Nested objects/arrays, to avoid unintended mutation

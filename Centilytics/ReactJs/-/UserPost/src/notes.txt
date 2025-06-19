@@ -1,0 +1,109 @@
+//epic returns the observable and tells the redux to dispatch the returned action
+
++-------------------+
+|   React Component  |
+|    (App.js)       |
+| dispatch(fetchPosts) & dispatch(fetchComments)  |
++---------+---------+
+          |
+          v
++-------------------+
+|   Redux Store     |
+|  Receives Actions |
++---------+---------+
+          |
+          v
++-------------------------+
+|  Epic Middleware Stream |
+|  Listens for fetchPosts |
++---------+---------+
+          |
+          v
++------------------------------+
+|  Epic detects fetchPosts action |
+|  Makes API call (axios)          |
++---------+---------+
+          |
+      Success / Failure 
+          |
+    +-----+-----------------+
+    |                       |
+    v                       v
++-----------+        +-------------+
+| fetchPostsSuccess | fetchPostsFailure |
++-----------+        +-------------+
+          |                       |
+          v                       v
++--------------------------+ +-------------------------+
+|  Reducers update state:   | | Reducers update error    |
+|  postsLoading = false     | | postsLoading = false     |
+|  posts = payload          | | postsError = error       |
++--------------------------+ +-------------------------+
+          |
+          v
++--------------------------+
+| React re-renders UI       |
+| Displays posts or error   |
++--------------------------+
+
+
+
+///
+
+
++-------------------+
+|   React Component  |
+|    (App.js)       |
+| dispatch(fetchPosts) & dispatch(fetchComments)  |
++---------+---------+
+          |
+          v
++-------------------+
+|   Redux Store     |
+|  Receives Actions |
++---------+---------+
+          |
+          v
++-------------------------+
+|  Epic Middleware Stream |
+|  Listens for fetchPosts |
++---------+---------+
+          |
+          v
++---------------------------------------------+
+| Epic receives fetchPosts action             |
+| Uses RxJS operators:                         |
+|  - mergeMap: calls axios.get() (async)      |
+|  - from(): converts Promise to Observable   |
++---------+-----------------------------------+
+          |
+          v
++---------------------------------------------+
+| Axios API call response (Observable stream)|
+|  - map(response => fetchPostsSuccess())     |
+|    => emits fetchPostsSuccess action object |
+|  - catchError(error => fetchPostsFailure()) |
+|    => emits fetchPostsFailure action object |
++---------+-----------------------------------+
+          |
+          v
++---------------------------------------------+
+| Epic returns Observable emitting action     |
+| Middleware dispatches emitted action to Redux|
++---------+-----------------------------------+
+          |
+          v
++--------------------------+
+| Reducers update state:    |
+|  postsLoading = false     |
+|  posts = payload          |
+| OR                       |
+|  postsLoading = false     |
+|  postsError = error       |
++--------------------------+
+          |
+          v
++--------------------------+
+| React re-renders UI       |
+| Displays posts or error   |
++--------------------------+

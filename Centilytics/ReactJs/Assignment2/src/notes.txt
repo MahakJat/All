@@ -1,0 +1,49 @@
+import { useEffect, useState } from "react";
+import { from, Subscription } from "rxjs";
+import { ajax } from "rxjs/ajax";
+import { map, catchError } from "rxjs/operators";
+
+function DataFetcher() {
+const \[data, setData] = useState(\[]);
+const \[error, setError] = useState(null);
+
+useEffect(() => {
+const subscription = ajax('[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)')
+.pipe(
+map(response => response.response),
+catchError(err => {
+setError('Failed to fetch');
+return \[];
+})
+)
+.subscribe({
+next: res => setData(res),
+error: err => setError(err.message),
+complete: () => console.log('Fetch complete')
+});
+
+```
+// Cleanup (unsubscribe to prevent memory leaks)
+return () => subscription.unsubscribe();
+```
+
+}, \[]);
+
+return ( <div>
+{error && <p>{error}</p>} <ul>
+{data.map(post => ( <li key={post.id}>{post.title}</li>
+))} </ul> </div>
+);
+}
+
+Why use ajax() from RxJS instead of fetch or axios?
+✅ Because ajax() returns an Observable, while fetch() and axios() return a Promise.
+⚙️ In your code:
+js
+Copy
+Edit
+import { ajax } from "rxjs/ajax";
+ajax() is part of RxJS.
+
+It returns an Observable that can be piped, subscribed to, cancelled (unsubscribed), and transformed using RxJS operators like map, catchError, switchMap, etc.
+

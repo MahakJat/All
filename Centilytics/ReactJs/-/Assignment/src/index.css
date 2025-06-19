@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 4rem;
+}
+
+.Searchbar {
+  background-color: #ebeaf1;
+  display: flex;
+  width: 50%;
+  padding: 0.7rem 0.8rem;
+  align-items: center;
+  gap: 0.35rem;
+  color: #bdbcc2;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.Searchbar input {
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+.Searchbar input::-moz-placeholder {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #bdbcc2;
+}
+.Searchbar input::placeholder {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #bdbcc2;
+}
+
+.scrollcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+nav h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+nav h4 {
+  font-size: 1.1rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+nav h4:hover {
+  color: #333;
+}
+
+.visible-window {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.Image-and-loading {
+  margin-top: 1rem;
+}
+.Image-and-loading.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.Image-and-loading .loading {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  color: #666;
+}
+.Image-and-loading .ImageList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ImageCart {
+  width: 24rem;
+  margin-top: 1%;
+  overflow: hidden;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.ImageCart:hover {
+  scale: 1.025;
+}
+
+.image-container {
+  width: 100%;
+  height: 16.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.image-container .details {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1.2rem;
+  z-index: 2;
+  transition: all ease 0.4s;
+}
+.image-container .details h5 {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.image-container .details .favorite-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.image-container .details .favorite-icon:hover {
+  transform: scale(1.15);
+}
+.image-container .details .favorite-icon.active {
+  color: #ff5a5a;
+}
+
+.ImageModalPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.ImageModalPage.open {
+  opacity: 1;
+  visibility: visible;
+}
+.ImageModalPage .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.ImageModalPage .close:hover {
+  transform: rotate(90deg);
+}
+.ImageModalPage .image {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ImageModalPage .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 4px;
+}
+
+.favorites-section {
+  padding: 2rem 0;
+}
+.favorites-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+.favorites-section .no-favorites {
+  text-align: center;
+  padding: 3rem 0;
+  color: #888;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=index.css.map */

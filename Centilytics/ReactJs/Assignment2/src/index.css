@@ -1,0 +1,149 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-item {
+  background-color: #fcfdfd;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.post-item.expanded {
+  background-color: #cce5f6;
+  border-left: 4px solid #3498db;
+}
+
+.post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.post-details {
+  animation: fadeIn 0.3s ease;
+}
+
+.post-body {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-tag {
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.post-reactions {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.no-data {
+  font-style: italic;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.comment-list::-webkit-scrollbar {
+  width: 6px;
+}
+.comment-list::-webkit-scrollbar-track {
+  background: #f5f8fa;
+}
+.comment-list::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 20px;
+}
+
+.comment-item {
+  background-color: #fcfdfd;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.comment-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.comment-item.selected {
+  background-color: #dce4ec;
+  border-left: 4px solid #2c3e50;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.comment-user {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3498db;
+}
+
+.comment-post-id {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  background-color: #ebeded;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.comment-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.no-data {
+  font-style: italic;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 1rem;
+}/*# sourceMappingURL=index.css.map */
