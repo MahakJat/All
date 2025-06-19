@@ -1,0 +1,121 @@
+Explanation of Each Part
+<!DOCTYPE html>
+
+Declares the document type as HTML5.
+Ensures the browser renders the page in standard mode.
+<html lang="en">
+
+The root element of an HTML document.
+The lang="en" attribute specifies the language of the document (English in this case).
+<head>
+
+Contains metadata (information about the document).
+
+Key Elements in <head>:
+
+<meta charset="UTF-8">: Ensures proper text encoding for various characters.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Makes the webpage responsive on all devices.
+<title>Document</title>: Sets the title of the webpage (visible in the browser tab).
+<link rel="stylesheet" href="styles.css">: Links an external CSS file for styling.
+<script src="script.js" defer></script>: Links an external JavaScript file with defer, ensuring it loads after the HTML is parsed.
+<body>
+
+Contains the content of the webpage (text, images, links, etc.).
+In this example, it contains an <h1> heading with "Hello, World!".
+Uses of HTML Boilerplate
+Ensures Proper Page Structure
+
+Provides a well-formed document structure that browsers can interpret correctly.
+Faster Development
+
+Acts as a template, so developers don’t need to rewrite common elements for every new project.
+Improves SEO and Accessibility
+
+The <title> and <meta> tags help with search engine rankings and user experience.
+Enhances Cross-Browser Compatibility
+
+The <!DOCTYPE html> declaration ensures the page is rendered consistently across different browsers.
+Supports Mobile Responsiveness
+
+The <meta name="viewport"> tag makes the page adapt to different screen sizes.
+
+
+
+
+
+
+
+ HTML Attributes
+    Attributes provide additional information about elements. They are written inside the opening tag.
+
+HTML Comments
+    Comments are not displayed in the browser and are used for code documentation.
+
+<blockquote cite="http://google.com">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi corporis perspiciatis magnam labore quibusdam inventore molestiae tempora ipsa illum cupiditate quaerat repellendus, error quae quo cumque consequuntur odit optio tenetur!
+</blockquote>
+
+1. <blockquote>
+This element indicates a long quotation from another source.
+The browser may add indentation to distinguish it from normal text.
+
+2. cite="http://google.com"
+The cite attribute specifies the source of the quote.
+This is not visible on the webpage but provides metadata for reference.
+Example use case: If this quote were from a research paper or a news article, the cite attribute would link to the source.
+
+3. Quoted Text
+The text inside <blockquote> is the actual quoted content. In this example, it is a placeholder text (Lorem Ipsum).
+
+Example with Visible Source
+Since the cite attribute is not displayed by default, you can manually add a source link:
+
+
+<blockquote>
+    "The only way to do great work is to love what you do."
+    <footer>- Steve Jobs, <cite><a href="https://example.com">Source</a></cite></footer>
+</blockquote>
+Here:
+
+<footer> is used to credit the author.
+<cite> is used to reference the source.
+
+
+feb icon
+
+<head>
+    <title>My Website</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+recommended
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+
+-------------------Defer-------------------------------------------
+The defer attribute makes sure that the script file loads without stopping the HTML from being read.
+But the script will only run after the whole HTML is fully loaded.
+
+Example Without defer (Problem Case)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script> <!-- No defer -->
+</head>
+<body>
+    <h1 id="title">Hello, World!</h1>
+</body>
+</html>
+script.js
+
+document.getElementById("title").innerText = "Hello, JavaScript!";
+What Happens?
+Since the script is placed in the <head> without defer, it runs before the HTML is fully loaded.
+
+The script tries to change the <h1> text, but <h1> doesn't exist yet!
+This causes an error: Cannot read properties of null, meaning JavaScript couldn't find the element.
+Fix With defer
+<script src="script.js" defer></script>
+Now, the script waits until the entire HTML is loaded before running, preventing error

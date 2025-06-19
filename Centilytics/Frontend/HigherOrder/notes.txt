@@ -1,0 +1,17 @@
+Function	Description	                                        Returns                                 	Mutates Original Array
+forEach()	Executes a callback for each item in the array.  	undefined	    ❌ No
+map()	    Transforms each element and returns a new array.	 New array	❌ No
+filter()	Filters elements based on a condition and returns a new array.	New array	  ❌ No
+reduce()	Reduces the array to a single value (like sum, product, etc.).	Any value (number, obj...)	❌ No
+find()	    Returns the first element that satisfies the condition.	Single element or undefined	❌ No
+findIndex()	Returns the index of the first matching element.	Index or -1	❌ No
+some()	    Returns true if at least one element passes the test.	true / false	❌ No
+every()   	Returns true if all elements pass the test.	true / false	❌ No
+sort()	    Sorts elements in place.	Reference to same array	✅ Yes
+reverse()	Reverses the order in place.	Reference to same array	✅ Yes
+splice()	Adds/removes elements in place.	Removed elements (array)	✅ Yes
+slice()	    Extracts a section and returns a new array.	New array	❌ No
+flat()   	Flattens nested arrays into a new array.	New array	❌ No
+flatMap()	Combines map() and flat() into one.	New array	❌ No
+fill()     	Fills elements with a static value in place.	Reference to same array	✅ Yes
+copyWithin()	Copies part of the array to another location in place.	Reference to same array	✅ Yes

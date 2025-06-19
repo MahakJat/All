@@ -1,0 +1,696 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+@font-face {
+    font-family: new_font;
+    src: url(./UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2);
+}
+.white{
+    color:white;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    font-family:new_font;
+    display: flex;
+}
+hr{
+    width: 100%;
+    border: 1px solid #ffffff2b;
+}
+/*------------------------------------------ aside--------------------------------------  */
+.aside-and-logo{
+    height: 100%;
+    background-color: #005699; 
+    width: 23vh;
+    z-index: 1;
+    position: fixed;
+}
+.logo-image{
+    width: 23vh;
+    display:flex;
+    justify-content: end;
+    background-color:#248ee0;
+ }
+ .logo-image:hover{
+    background-color: #EE393F;
+ } 
+.logo-image img{
+   width: 97%;
+}
+
+.btn-1{
+    background-color: #EE393F;
+    color: white;
+    padding: 2vh 6.5vh;
+    border:none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    transition: all ease 0.3s;
+    box-shadow: 0px 3px #d61218d3;
+    cursor: pointer;
+}
+.btn-1-div{
+    padding: 2vh 3vh;
+}
+.btn-1:hover{
+    background-color: #F00000;
+}
+
+.aside-element{
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    cursor: pointer;
+    padding: 2vh 3vh;
+
+}
+.aside-element:hover{
+    background-color: #00467B;
+}
+.aside-element img{
+    width: 15px;
+}
+.aside-element h3{
+    text-transform: uppercase;
+    color: #80ABCC;
+    font-size: 1.8vh;
+    font-weight: 800;
+}
+#aside-element-7 h3{
+    padding-left: 22px;
+}
+#aside-element-8 h3{
+    padding-left: 22px;
+}
+
+button{
+    cursor: pointer;
+}
+/* animation part */
+
+.animation-div{
+  background-color: #002f52;
+  position: fixed;
+  /* z-index: 10; */
+  left: 23vh;
+  /* animation lagane se pehle bhi hume default me width and heigth dena hoga */
+  width: 0;
+  height: 0;
+  display: none;
+  width: 75vw;
+  height: 100vw;
+  z-index: 100;
+  top: 0%;
+  left:23vh
+}
+
+ #aside-element-1:hover #animation-div-1{
+    animation-name: animation_part; 
+    animation-duration: 0.9s;
+    display: block;
+    animation-fill-mode: forwards;
+}
+
+.animation-div-content{
+    display: flex
+}
+#aside-element-2:hover #animation-div-2{
+    animation-name: animation_part; 
+    animation-duration: 0.9s;
+    display: block;
+    animation-fill-mode: forwards;
+}
+@keyframes animation_part {
+    from{
+        width: 0%;
+        height: 0%;
+    }
+    to{
+        width: 75vw;
+        height: 100vw;
+    }
+}
+.animation-div h1{
+    text-align: center;
+    color: white;
+    margin-top: 10vh;
+}
+.animation-div-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10vh;
+    margin-top: 12vh;
+
+}
+.animation-div-content-parts h3{
+    color:white;
+    font-size: 2.5vh;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom:4vh ;
+}
+.animation-div-content-parts h4{
+  color: #cecbcb;
+  font-size: 1.9vh;
+  font-weight: 400;
+  line-height: 2;
+}
+.animation-div-content-parts h4:hover{
+    color:#0d6297;
+    
+
+}
+/*---------------------------------------------------------------------------------------- */
+section{
+    width: calc(100% - 22vh);
+    margin-left: 22vh;
+}
+
+nav{
+    display: flex;
+    background-color: #004375;
+    padding: 2.5vh;   
+    justify-content: space-between;
+}
+.nav-div{
+    display: flex;
+    width: 85%;
+    justify-content: flex-start;
+}
+.nav-div-1{
+    border-right: 1px solid #ffffff3a; 
+    padding-right: 5%;
+    padding-left:1% ;
+
+}
+.nav-div-2{
+    border-right: 1px solid #ffffff3a; 
+    padding-left:3% ;
+    padding-right: 15%;
+}
+
+.nav-bar-btn{
+    background-color: #EE393F;
+    color: white;
+    padding:  2vh;
+    border:none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    box-shadow: 0px 3px #ee393fd3;
+    transition: all ease 0.3s;
+}
+
+.nav-bar-btn:hover{
+    background-color:#005699; 
+    box-shadow: 0px 3px #0c293f;
+    border: none;
+}
+.nav-bar-btn img{
+    height: 14px;
+}
+
+/* nav-division */
+
+.nav-div-1 h6{
+    font-weight: 400;
+    font-size: 1.5vh;
+    line-height: 2;
+}
+.nav-div-1 h3{
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+.nav-div-2 h2{
+    font-size: 2.5vh;
+}
+.nav-div-2 h3{
+    font-size: 2.5vh;
+}
+
+/* container  */
+.main-container{
+    width: 100%;
+    height: inherit;
+    background-image:linear-gradient(rgba(1, 20, 40, 0), rgb(1, 20, 40) 82%), url('https://jayant061.github.io/ecb-homepage/images/Englad_Test_Match_Image.png') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 10vh;
+    padding-bottom: 20px;
+}
+
+/* content of the main div */
+.content{
+   padding-top: 20vh;
+}
+.heading-h5 h5{
+    color:#61a2e8 ;
+    font-weight: 300;
+     font-size: 2vh;
+}
+.play_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EE393F;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 600;
+    gap:3px;
+    padding: 2px 4px;
+}
+.play_btn img{
+height: 10px;
+}
+.heading{
+    padding-right: 45% ;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    margin-bottom: 4px;
+}
+.heading a{
+    color:white;
+    text-decoration: none;
+    font-size: 6vmin;
+    font-weight: 700;
+}
+.heading a:hover{
+    text-decoration: underline;
+}
+
+.btn-2{
+    background-color: #EE393F;
+    color: white;
+    padding: 8px 8px;
+    border:none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0px 3px #e93e44c0;
+    transition: all ease 0.3s;
+    margin-top: 20px;
+}
+.btn-2:hover{
+    background-color:#0165b2; 
+    box-shadow: 0px 3px #0f3450;
+}
+.btn-2 img{
+    height: 14px;
+}
+
+
+/* multiple content  div */
+
+.multiple-boxes{
+    display: flex;
+    gap:2vh;
+    margin-top: 8vh;
+}
+.multiple-boxes-1{
+    display: flex;
+    height: 30%;
+    width: 45%;
+}
+.multiple-boxes-2{
+    display: flex;
+    height: 30%;
+    width: 25%;
+}
+.multiple-boxes-3{
+    display: flex;
+    height: 30%;
+    width: 25%;
+}
+.div-1{
+    background-image:linear-gradient(#ffffff00 53%, rgb(0, 47, 82) 80%), url(https://jayant061.github.io/ecb-homepage/images/card-1.png);
+    width: 100%;
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: all ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+
+}
+.div-2{
+    background-image:linear-gradient(#ffffff00 53%, rgb(0, 47, 82) 80%), url(https://jayant061.github.io/ecb-homepage/images/card-2.png);
+    width: 100%;
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+    position: relative;;
+    transition: all ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+}
+.div-3{
+    background-image:linear-gradient(#ffffff00 53%, rgb(0, 47, 82) 80%), url(https://jayant061.github.io/ecb-homepage/images/card-3.png);
+    width: 100%;
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+    position: relative;;
+    transition: all ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+}
+.boxes-div-content{
+    padding: 0px 20px;
+}
+.boxes-div-content p{
+    font-size: 1.3vh;
+    font-weight: 300;
+    margin-top: 3px;
+}
+.boxes-div-content .heading_1{
+    margin-top: 6px;
+}
+.boxes-div-content .heading_1 a{
+    color:white;
+    text-decoration: none;
+    font-size: 3vh;
+    font-weight: 700;
+}
+
+.div-motion:hover .boxes-div-content .heading_1 a{
+    text-decoration: underline;
+}
+
+.div-motion:hover {
+      scale: 1.01; 
+}
+
+.div-motion-h5{
+    color:#257ddc ;
+    font-weight: 600;
+     margin-top: 1vh;
+}
+.boxes-div-content-1{
+    display: none;
+}
+
+/* responsive */
+.responsive-nav{
+    display: flex;
+    z-index: 200;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 1vh;
+    align-items: center;
+    background-color: #005699;
+    display: none;
+    box-shadow: 0px 2px 8px #002D58 ;
+
+}
+.responsive-nav img{
+    width: 15vh;
+}
+.responsive-nav-btn{
+    background-color: #EE393F;
+    color: white;
+    padding:  1vh 1.2vh;
+    border:none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    box-shadow: 0px 3px #ee393fd3;
+    transition: all ease 0.3s;
+}
+
+.responsive-nav-btn:hover{
+    background-color:#005699; 
+    box-shadow: 0px 3px #0c293f;
+    border: none;
+}
+.leftside-responsive-nav{
+    display: flex;
+    align-items: center;
+    color:white;
+    text-transform: uppercase;
+    gap: 2vh;
+   
+}
+.menu-part{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 2vh;
+    gap: 1vh;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.menu:hover .close{
+    cursor: pointer;
+    display: block;
+}
+.menu:hover .menu-icon{
+    display:none;
+}
+.menu-icon{
+    display: block;
+}
+.menu-part i{
+    font-size: 3vh;
+}
+.close {
+    display: none;
+}
+.menu:hover .open-menu{
+    display: block;
+}
+.open-menu{
+    height: 100vh;
+    width: 100%;
+    background-color:#005699;
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    display: none;
+    box-shadow: 4px 0px 10px #051929;
+}
+.open-menu-elem-vis{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh;
+}
+.open-menu-elem-hidden{
+    display: none;
+}
+.open-menu-elem-1:hover .open-menu-elem-hidden-1{
+  display: block;
+}
+.open-menu-elem-2:hover .open-menu-elem-hidden-2{
+    display: block;
+  }
+.open-menu-elem-vis:hover{
+    background-color: #00355E;
+}
+
+.open-menu-elem-imgs-heading{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+.open-menu-elem-imgs-heading h5{
+    text-transform: uppercase;
+    font-size: 1.5vh;
+
+}
+.open-menu-elem-vis img{
+    width:  1.5vh;
+}
+
+.open-menu-elem-hidden h4{
+  text-transform: capitalize;
+  color:white;
+  padding: 1.5vh 2vh;
+}
+.open-menu-elem-hidden h4:hover{
+    background-color: #191970;
+}
+
+
+/* responsive - part */
+
+.boxes-div-content-1{
+    padding: 5px 20px;
+    /* background-color: yellow; */
+    border-top: 1px dotted rgb(60, 58, 58);
+}
+.boxes-div-content-1 .heading_1 a{
+    color:black;
+    text-decoration: none;
+    font-size: 3vh;
+    font-weight: 700;
+    
+}
+.boxes-div-content-1:hover .link{
+    text-decoration: underline;
+} 
+
+/* reponsive menu div */
+
+
+@media (max-width:890px) {
+    .responsive-nav{
+      display: block;
+      display: flex;
+    }
+   /* nav bar */
+   .nav-bar-btn{
+    display: none;
+   }
+   nav{
+    margin-top: 7vh;
+    padding: 2vh;
+   }
+
+   /* nav-division */
+  .nav-div-1 h6{
+    font-weight: 300;
+    font-size: 1vh;
+    line-height: 2;
+   }
+  .nav-div-1 h3{
+    font-weight: 400;
+    font-size: 1.5vh;
+    line-height: 2;
+  }
+
+  .nav-div-2 h2{
+    font-size: 1.2vh;
+    line-height: 2;
+  }
+  .nav-div-2 h3{
+    font-size: 1.2vh;
+  }
+  .nav-div{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-div-1{
+    border-right:none ;
+  }
+  .nav-div-2{
+    border-right: none;
+    border-left:1px solid #ffffff3a;  ;
+  }
+
+    .aside-and-logo{
+        display: none;
+    }
+
+    .heading-h5 h5{
+        font-size: 1.5vh;
+        font-weight: 500;
+    }
+    section{
+        width: auto;
+        margin-left: 0;
+    }
+    .main-container{
+        background-image:linear-gradient(rgba(1, 20, 40, 0), rgb(1, 20, 40) 82%), url('https://jayant061.github.io/ecb-homepage/images/England-U19s-leave-the-field-in-Australia.png') ;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-left: 2vh;
+        height: 60vh;
+        width: 100%;
+    }
+    .content{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }  
+    .heading{
+        padding-right: 0;
+    }
+    .heading a{
+        font-size: 2vh;
+    }
+    /* multiple */
+    .multiple-boxes{
+        margin-top: 5vh;
+        display:flex;
+        flex-direction: column;
+    }
+    .multiple-boxes-1{
+        display: flex;
+        height: 30%;
+        width: 100%;
+    }
+    .multiple-boxes-2{
+        display: flex;
+        height: 30%;
+        width: 100%;
+    }
+    .multiple-boxes-3{
+        display: flex;
+        height: 30%;
+        width: 100%;
+    }
+  
+    .boxes-div-content{
+       display: none;
+    }
+
+    .boxes-div-content-1 {
+        width: 80%;
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div-1{
+        background-image: url(https://jayant061.github.io/ecb-homepage/images/card-1.png);
+        width: 35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .div-2{
+        background-image: url(https://jayant061.github.io/ecb-homepage/images/card-2.png);
+        width:35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }.div-3{
+        background-image: url(https://jayant061.github.io/ecb-homepage/images/card-3.png);
+        width:35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   
+}
