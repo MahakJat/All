@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+}
+
+.state {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(196, 194, 194, 0.1882352941);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.state .card {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;
+}
+.state .card button {
+  border: none;
+  background-color: rgb(9, 105, 73);
+  padding: 0.5rem 2rem;
+  border-radius: 0.2rem;
+  color: white;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.state .card button:hover {
+  scale: 1.025;
+  background-color: rgb(2, 67, 45);
+}
+.state .card .username {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.props {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: rgba(196, 194, 194, 0.1882352941);
+}
+.props .carts {
+  width: 20rem;
+  height: 10rem;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;
+}
+.props .carts .username {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.props-project {
+  padding: 3rem 5rem;
+  background-color: #d6d6d6;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.props-project .cart {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21rem;
+  padding: 2rem;
+  gap: 0.7rem;
+  border-radius: 1rem;
+  box-shadow: 0.16rem 0.16rem 0.5rem rgba(128, 128, 128, 0.725);
+}
+.props-project .cart .level {
+  color: rgba(36, 36, 74, 0.9647058824);
+  background-color: rgba(224, 237, 246, 0.8666666667);
+  padding: 0.1rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.props-project .cart .details {
+  text-align: center;
+}
+.props-project .cart .details .name {
+  text-transform: capitalize;
+  color: #21225b;
+}
+.props-project .cart .details .position {
+  color: #21225b;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  line-height: 0.95;
+}
+.props-project .cart .description {
+  color: #696988;
+  text-align: center;
+}
+.props-project .cart .social-media {
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.3rem;
+  color: #222257;
+  display: flex;
+  justify-content: space-between;
+}
+.props-project .cart .btns {
+  display: flex;
+  gap: 1rem;
+}
+.props-project .cart .btns .message {
+  border: 2px solid #222257;
+  font-weight: 600;
+  color: #222257;
+  cursor: pointer;
+  background-color: white;
+  padding: 1rem 2.4rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  transition: all ease 0.7s;
+}
+.props-project .cart .btns .message:hover {
+  background-color: rgba(222, 222, 222, 0.547);
+}
+.props-project .cart .btns .connect {
+  background-color: #222257;
+  color: white;
+  border: 2px solid #222257;
+  padding: 1rem 2.4rem;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all ease 0.7s;
+}
+.props-project .cart .btns .connect:hover {
+  background-color: #33338b;
+}
+.props-project .cart .profile-img {
+  width: 7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.props-project .cart .profile-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.state-project {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.state-project div {
+  box-shadow: 3px 3px 10px grey;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.state-project div button {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  background-color: #222257;
+  color: white;
+  border: 2px solid #222257;
+  padding: 1rem 2.4rem;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all ease 0.7s;
+}
+.state-project div button:hover {
+  background-color: #33338b;
+}
+
+.todo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#78138f, #5c2768);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.todo h1 {
+  color: white;
+}
+.todo .todo-list-cart {
+  background-color: #fdfffc;
+  width: 32vw;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.todo .todo-list-cart .input-add-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.75rem;
+}
+.todo .todo-list-cart .input-add-btn .input-div {
+  width: 100%;
+}
+.todo .todo-list-cart .input-add-btn .input-div input[type=text] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(146, 144, 144, 0.21);
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 0.9rem;
+}
+.todo .todo-list-cart .input-add-btn .input-div input[type=text]::-moz-placeholder {
+  font-size: 0.9rem;
+}
+.todo .todo-list-cart .input-add-btn .input-div input[type=text]::placeholder {
+  font-size: 0.9rem;
+}
+.todo .todo-list-cart .input-add-btn button {
+  background-color: #590c6a;
+  padding: 1rem 2rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all ease 0.5s;
+}
+.todo .todo-list-cart .input-add-btn button:hover {
+  background-color: rgba(89, 12, 106, 0.8823529412);
+}
+.todo .todo-list-cart .task-list-div {
+  overflow-y: auto;
+  height: 60vh;
+  margin-top: 2rem;
+}
+.todo .todo-list-cart .task-list-div::-webkit-scrollbar {
+  display: none;
+}
+.todo .todo-list-cart .task-list-div .task {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem;
+  border-top: 2px solid rgba(146, 144, 144, 0.21);
+}
+.todo .todo-list-cart .task-list-div .task p {
+  line-height: 1.1;
+  font-size: 0.95rem;
+}
+.todo .todo-list-cart .task-list-div .task .update-delete-btn {
+  display: flex;
+  gap: 0.5rem;
+}
+.todo .todo-list-cart .task-list-div .task .update-delete-btn i {
+  background-color: rgba(128, 128, 128, 0.503);
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.counter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.counter h3 {
+  margin-bottom: 0.5rem;
+}
+
+.search {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  gap: 2vw;
+}/*# sourceMappingURL=index.css.map */

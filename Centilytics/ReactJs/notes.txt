@@ -1,0 +1,34 @@
+In React applications, your components are typically mounted into a root DOM element (commonly with id="root"), which isn't explicitly defined in your CSS examples above.
+Let's break down why one works and the other doesn't:
+Working Solution:
+csshtml, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+This works because:
+
+You're setting height: 100% on all three critical elements in the DOM hierarchy: html, body, AND #root (the container where React mounts your application)
+When your component uses height: 100%, it can properly inherit height from its parent (#root)
+
+Non-Working Solution:
+csshtml, body {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+This fails because:
+
+You're only setting height: 100% on html and body, but not on the #root element
+The React mount point (#root) doesn't have an explicit height set, so it defaults to content-based height
+When your components try to use height: 100%, they're getting 100% of their parent's height, which isn't properly set
+
+To fix this, you need to ensure the height cascades properly through the entire DOM hierarchy:
+
+html → 100% of viewport
+body → 100% of html
+#root → 100% of body
+Your React components → 100% of #root
+
+Add the #root selector to your CSS to complete the height chain, and your components should properly inherit the height.
