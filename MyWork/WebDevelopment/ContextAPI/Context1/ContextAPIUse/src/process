@@ -1,0 +1,7 @@
+1. make a folder named context in a src directory
+2. make a file inside that folder named UserContext.jsx
+3. wrap App.jsx by Context file, inside main.jsx
+4. render children element insite UserContext.jsx by giving children props
+5. Create Context Provider (UserDataContext.jsx) and export it in UserContext.jsx
+6. give it a value attribute (if multiple data give array)
+7. If you want to access the data of that Context provider, just use useContext() and inside that bracket write the name of context provider
