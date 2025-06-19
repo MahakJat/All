@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box ;
+}
+.card-container{
+  width: 100%;
+  background-color: antiquewhite;
+   padding-top: 1px;
+   padding: 5rem;
+  
+}
+.card{
+ 
+  width: 12rem;
+  height: 12rem;
+  background-color: rgb(187, 81, 81);
+  margin-top: 2rem;  color: white;
+  text-align: center;
+  font-size: 2rem;
+}

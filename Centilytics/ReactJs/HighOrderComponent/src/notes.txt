@@ -1,0 +1,34 @@
+tell me how it is working in the start when showing every element of the array
+const [vegis, setVegis] = useState("");
+vegis is an empty string ("") by default.
+
+That means the user hasn’t typed anything in the search bar yet.
+
+Filter Logic:
+js
+Copy
+Edit
+const filteredVeggies = vegetables.filter((item) =>
+  item.toLowerCase().includes(vegis.toLowerCase())
+);
+Since vegis is "", this condition:
+
+js
+Copy
+Edit
+item.toLowerCase().includes("")
+always returns true for every item in the array — because every string contains the empty string.
+
+For example:
+
+js
+Copy
+Edit
+"Carrot".toLowerCase().includes("") // true
+"Tomato".toLowerCase().includes("") // true
+So initially:
+All the vegetables match the condition.
+
+filteredVeggies contains all the items in the original vegetables array.
+
+That's why everything is shown on first render.
