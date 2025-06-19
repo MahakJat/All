@@ -1,0 +1,146 @@
+// import React, { useState, memo } from 'react';
+// import './app.css'; // We'll define this separately
+
+// function App() {
+//   const [count, setCount] = useState(0);
+//   const [text, setText] = useState('Hello');
+  
+//   console.log('Parent App rendered');
+  
+//   return (
+//     <div className="container">
+//       <h1>Pure Component Example</h1>
+      
+//       {/* Counter section */}
+//       <div className="section">
+//         <p>Count: {count}</p>
+//         <button 
+//           onClick={() => setCount(count + 1)} 
+//           className="button"
+//         >
+//           Increment Count
+//         </button>
+//       </div>
+      
+//       {/* Text section */}
+//       <div className="section">
+//         <input
+//           type="text"
+//           value={text}
+//           onChange={(e) => setText(e.target.value)}
+//           className="input"
+//         />
+//       </div>
+      
+//       {/* Components section */}
+//       <div className="components-container">
+//         <div className="component-wrapper">
+//           <h2>Regular Component</h2>
+//           <RegularComponent message="I re-render every time!" />
+//         </div>
+        
+//         <div className="component-wrapper">
+//           <h2>Pure Component</h2>
+//           <PureComponent message="I only re-render when props change!" />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// // Regular functional component
+// function RegularComponent({ message }) {
+//   console.log('RegularComponent rendered');
+//   return (
+//     <div className="component">
+//       <p>{message}</p>
+//       <p className="note">Check console to see renders</p>
+//     </div>
+//   );
+// }
+
+// // Pure component using React.memo
+// const PureComponent = memo(function PureComponent({ message }) {
+//   console.log('PureComponent rendered');
+//   return (
+//     <div className="component">
+//       <p>{message}</p>
+//       <p className="note">Check console to see renders</p>
+//     </div>
+//   );
+// });
+
+// export default App;
+
+// /* styles.css */
+// .container {
+//     padding: 24px;
+//     max-width: 600px;
+//     margin: 0 auto;
+//     font-family: Arial, sans-serif;
+//   }
+  
+//   h1 {
+//     font-size: 24px;
+//     font-weight: bold;
+//     margin-bottom: 16px;
+//   }
+  
+//   h2 {
+//     font-size: 18px;
+//     font-weight: bold;
+//     margin-bottom: 8px;
+//   }
+  
+//   .section {
+//     margin-bottom: 24px;
+//     padding: 16px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//   }
+  
+//   .button {
+//     background-color: #3b82f6;
+//     color: white;
+//     padding: 8px 16px;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+//     margin-top: 8px;
+//   }
+  
+//   .button:hover {
+//     background-color: #2563eb;
+//   }
+  
+//   .input {
+//     border: 1px solid #ccc;
+//     padding: 8px;
+//     width: 100%;
+//     box-sizing: border-box;
+//     margin-bottom: 8px;
+//   }
+  
+//   .components-container {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 16px;
+//   }
+  
+//   .component-wrapper {
+//     padding: 16px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     background-color: #f3f4f6;
+//   }
+  
+//   .component {
+//     padding: 8px;
+//     background-color: white;
+//     border: 1px solid #ccc;
+//   }
+  
+//   .note {
+//     font-size: 14px;
+//     color: #6b7280;
+//   }
