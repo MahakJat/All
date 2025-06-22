@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center bg-[#FFD583] h-screen">
+      <div class="bg-[#fff1d9] w-[30vw] h-[40vw] p-5 rounded-[5vh] shadow-lg">
+        <h1 class="uppercase text-[#241f18] text-3xl text-center font-bold">
+          to do list
+        </h1>
+        <form
+          class="bg-[#ffd190] rounded-[5vh] px-2 py-2 w-full flex justify-between mt-5"
+        >
+          <input
+            class="w-5/6 focus:outline-none py-6 p-4 bg-transparent text-white h-8 text-xl placeholder:text-white placeholder:text-xl"
+            type="text"
+            placeholder="Enter task..."
+          />
+          <button
+            class="submit-input-button ml-[2vh] px-2 py-1 font-[gilroy] text-[2.5vh] bg-white rounded-full shadow-lg text-[#FFD190]"
+          >
+            <i class="ri-add-line text-3xl font-bold"></i>
+          </button>
+        </form>
+
+        <div class="taskList p-2 w-full mt-5 bg-[#FFDCAA] h-[53vh] rounded-[4vh] flex flex-col gap-2">
+            <!-- here task will be -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

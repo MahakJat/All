@@ -1,0 +1,58 @@
+
+
+1. Simple Product Search (Filtering Objects)
+Scenario: You have an array of product objects (name, price). Create an input field where users can type a product name, and the list will filter and show only the products that match the input text.
+Key Concepts: Filtering arrays, handling user input, updating the DOM.
+Technologies: JavaScript (for filtering), HTML (input field, product list), CSS (basic styling).
+
+
+2.(done) Interactive Counter
+Scenario: You need to build a counter that increases or decreases a number when the user clicks "+" or "-" buttons. Display the current count on the page.
+Key Concepts: Handling button clicks, updating the DOM, event listeners.
+Technologies: JavaScript (for the count logic), HTML (buttons and display area), CSS (styling buttons).
+
+
+3. Simple Image Gallery with Lightbox
+Scenario: You have an array of image URLs. Display them in a grid, and when a user clicks an image, show it in a larger view (a lightbox effect) on top of the page.
+Key Concepts: DOM manipulation, event handling, class toggling (for lightbox effect).
+Technologies: JavaScript (for lightbox functionality), HTML (image grid), CSS (styling, positioning).
+
+
+4.(done) Basic Form Validation
+Scenario: Create a simple form with a name and email input. When the form is submitted, check if both fields are filled in. If not, show an error message; if they are filled in, display a success message.
+Key Concepts: Form handling, validation, error handling, DOM updates.
+Technologies: JavaScript (for validation), HTML (form elements), CSS (styling error/success messages).
+
+5.(done) Click to Toggle Visibility
+Scenario: You need to create a simple FAQ-style section where each question can be clicked to reveal or hide the answer. Each answer should be hidden by default and only shown when the user clicks the question.
+Key Concepts: Event handling, toggling classes, DOM manipulation.
+Technologies: JavaScript (for toggling visibility), HTML (question-answer structure), CSS (styling, hiding/showing elements).
+
+
+6.(done) Simple Task List (Add and Delete Tasks)
+Scenario: Build a simple task list where users can add tasks by typing into an input field and clicking a button. The list should display the tasks below, and each task should have a delete button to remove it.
+Key Concepts: Handling input and button clicks, updating the DOM, adding/removing elements dynamically.
+Technologies: JavaScript (for adding/removing tasks), HTML (input field, list structure), CSS (basic styling).
+
+
+7.(done) Dynamic Color Changer
+Scenario: Create a page with a button that changes the background color each time it’s clicked. Cycle through a set of predefined colors (e.g., red, blue, green).
+Key Concepts: DOM manipulation, event handling, working with CSS properties dynamically.
+Technologies: JavaScript (for color change logic), HTML (button), CSS (styling).
+
+
+8.(done) Simple Calculator
+Scenario: Build a basic calculator with buttons for numbers 0-9 and simple operations like addition, subtraction, multiplication, and division. Display the result when the user clicks the "=" button.
+Key Concepts: Handling button clicks, performing basic calculations, updating the DOM.
+Technologies: JavaScript (for calculations), HTML (buttons, display area), CSS (styling buttons).
+
+9.(done) Text Toggle (Show/Hide Content)
+Scenario: You need to create a button that toggles between showing and hiding text. When clicked, the button will either show or hide a paragraph.
+Key Concepts: Event handling, toggling visibility, updating DOM elements.
+Technologies: JavaScript (for toggling text), HTML (button, paragraph), CSS (styling).
+
+
+10.(done) Simple Stopwatch
+Scenario: Create a basic stopwatch with a start, stop, and reset button. When the start button is clicked, the stopwatch starts counting up, and when stopped, it freezes at the current count. The reset button should set the count back to zero.
+Key Concepts: Handling button clicks, time intervals, DOM updates.
+Technologies: JavaScript (for timing and logic), HTML (buttons, display), CSS (styling).

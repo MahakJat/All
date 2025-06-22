@@ -1,0 +1,11 @@
+.box{
+    background-image: linear-gradient(to bottom right,#3F3F63 ,#0b0d2f );
+  
+}
+.cart
+{
+    background-image: linear-gradient(to bottom right,#222342 ,#222342 );
+}
+*{
+    font-family: gilroy;
+}

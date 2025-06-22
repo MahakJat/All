@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center items-center">
+        <form class="flex flex-col justify-center mt-32">
+            <input required type="text" id="username" placeholder="Enter UserName">
+            <input required type="text" id="email" placeholder="Enter Your email">
+            <!-- if the type = email then it will automatically check for the propeties of email -->
+            <input required type="number" name="phone" id="phone" placeholder="Enter number">
+            <input required type="password" name="password" id="password" placeholder="Enter password">
+            <input required type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password">
+            <input type="submit" id="submit" value="submit">
+        </form>     
+    </div> 
+    <script src="style.js"></script>
+</body>
+</html>

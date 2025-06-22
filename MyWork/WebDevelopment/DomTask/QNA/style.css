@@ -1,0 +1,13 @@
+.faq-item .answer {
+    display: none; /* Hide the answers by default */
+    margin-top: 10px;
+}
+
+/* .faq-item.active .answer {
+    display: block; /* Show the answer when the parent faq-item has the 'active' class */
+/* } */ 
+
+.question {
+    font-weight: bold;
+    cursor: pointer; 
+}
