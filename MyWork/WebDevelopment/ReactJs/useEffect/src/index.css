@@ -1,0 +1,10 @@
+img{
+  width: 20vw;
+  position: absolute;
+}
+button{
+  position: absolute;
+  left: 50vw;
+  top:50vh;
+  transform: translate(-50%, -50%);
+}

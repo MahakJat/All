@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-div{
+    perspective: 800px;
+}
+.button-div button {
+    transition: all ease 0.2s; 
+}
+*{
+  user-select: none;
+}
+.button-div:hover button {
+    transform: translateY(-7px); 
+}
+.box{
+    box-shadow: 0.5px 0.5px 15px #96a9a4;
+}
+
+.buttonTwo{
+    box-shadow: 0.5px 0.5px 7px #96a9a4;
+
+}
