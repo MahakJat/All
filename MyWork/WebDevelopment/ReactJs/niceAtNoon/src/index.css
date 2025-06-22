@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* body{
+  padding-left:10vh;
+  padding-right: 10vh; */
+/* } */
+@font-face {
+  font-family: "font-1";
+  src: url(\fonts\6479b994523a6279a03d4da7_Siaga-Bold.woff2);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(fonts\64eda5e581cb8e58ed55dea5_apercu-medium.woff2);
+}
+@font-face {
+  font-family: "font-3";
+  src: url(fonts\6479b994523a6279a03d4da7_Siaga-Bold.woff2);
+}
+@keyframes motion {
+  from{
+    transform: translateX(-20%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes line-ani {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes line-reverse {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.svg-animation {
+  animation-name: rotate;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.line-div-parent:hover .line-div {
+  animation-name: line-ani;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.line-div-parent:not(:hover) .line-div {
+  animation-name: line-reverse;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; /* Keeps the final state after reversing */
+}
+.move {
+  animation-name:motion ;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

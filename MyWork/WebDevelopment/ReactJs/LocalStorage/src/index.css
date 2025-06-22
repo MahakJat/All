@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: gilroy;
+}
+#dark{
+    background-color: #030921;
+    color: hsl(212, 51%, 59%);
+}
+#light{
+    color: #030921;
+    background-color: hsl(212, 51%, 59%);
+}
