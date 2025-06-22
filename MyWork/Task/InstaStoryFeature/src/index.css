@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+.bg_Color{
+    background-image: linear-gradient(30deg,#5442D6, #DF215E,#bd269c,#f44c44,#fec053);
+}
+.ellipsis {
+    width: 7vh;           /* Set the maximum width */
+    white-space: nowrap;    /* Prevent text wrapping */
+    overflow: hidden;       /* Hide the overflowing text */
+    text-overflow: ellipsis; /* Add "..." at the end of the text */
+     /* Optional: To visualize the container */
+  }

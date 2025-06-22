@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box{
+    background-image: linear-gradient(#1D4E9A,#89B5DC,#FAD352,#F1AC07);
+    /* background-image: linear-gradient(to right, #1D4E9A,#89B5DC,#FAD352,#F1AC07); */
+    /* background-image: linear-gradient( #FAD352,#F1AC07,#89B5DC,#1D4E9A); */
+}
+button{
+    color:#1D4E9A;
+    background-color: white;
+}
