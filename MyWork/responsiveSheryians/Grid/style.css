@@ -1,0 +1,93 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+.parent{
+    height: 600px;
+    width: 1000px;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 100px 300px 100px; /* isse parent apne apko 3 columns me div kar lega */
+    /* first column = 100px second column = 300px  third column = 100px  */
+    /* tells how many columns and there width  */
+/* aur joh extra div bhi hoge woh next line me ishi tarah se aaye ek ki with hogi 100px next 300px third ki 100px */
+
+   grid-template-rows: 100px 200px 300px; 
+   /*  grid-template-rows: 100px ;  if you will not give other div it will div them in equal part of the parent space left*/
+   /*height of the first row = 100px second row = 200px third row = 300px  */
+}
+
+.child{
+    /* height: 300px; no need to give height if you are using the row templete other wise it will create problem because row will act as the height */
+    background-color: red;
+    border: 1px solid black;
+}
+
+.parent_1{
+    margin-top: 20vh;
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    display: grid;
+    /* grid-template-areas: 
+    "a a b"
+    "a a b"
+    "c c c"; */
+    grid-template-areas:
+    "a a ."
+    "a a ."
+    ". b c" ;
+
+    /* .(dot) represents the cell  */
+}
+.child_1{
+    background-color: red;
+    border: 2px solid black;
+}
+.child_a{
+    grid-area: a;
+    background-color: red;
+}
+.child_b{
+    grid-area: b;
+    background-color: blue;
+}
+.child_c{
+    grid-area: c;
+    background-color: violet;
+}
+
+/*  */
+
+.parent_2{
+    margin-top: 20vh;
+    height: 300px;
+    width: 700px;
+    display: grid;
+
+    background-color: yellow;   
+    /* grid-template-columns: repeat(3 ,  100px);  */
+    /* 3 colums with 300px width */
+    grid-template-columns: repeat(3 ,  1fr); 
+    /* isko 3 times repeat karo and its width 1fr mean the 1 fraction of the total width  */
+
+}
+.child_2{
+    height: 200px;
+    border: 1px solid black ;
+}
+
+.child_2_a{
+    background-color: red;
+}
+.child_2_b{
+    background-color: blue;
+}
+.child_2_c{
+    background-color: violet;
+}

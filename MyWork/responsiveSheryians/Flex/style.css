@@ -1,0 +1,59 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+.parent{
+    width: 1200px;
+    height: 150px;
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    /* The flex-wrap property in CSS Flexbox controls whether the flex container's children (flex items) should wrap onto multiple lines when there isn't enough space in the container */
+}
+.child{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid black;
+    
+/* these child shrinks to fit in the parent because by default shrink is one and the width is parent div is less than the total width of all the child div */
+
+
+/* In display: flex;, the child elements can shrink because of the default flexbox behavior. 
+The key property that controls this is:
+
+flex-shrink (Default: 1)
+By default, flex items shrink when there's not enough space in the container. This happens because:
+
+Flex items have flex-shrink: 1;, which means they are allowed to shrink if needed.
+The parent container distributes space dynamically among children.
+If the total width of the children exceeds the container width, they will shrink proportionally. */
+
+/* if we give flex-shrink :0 property the no child will shrink but will overflow from the parent div */
+
+/* flex-shrink: 0; */ 
+/* instead of this apply  flex-wrap:  wrap;  to the parent  so when there no space in parent then the child moves to the next line instead of overflowing in screen horizontally  */
+
+
+
+}
+
+.parent2{
+    width: 1200px;
+    height: 300px;
+    background-color: yellow;
+    display: flex;
+    margin-top: 20vh;
+}
+.child2{
+    
+    /* if two child2 will be they will be half half if one child2 then covers the whole div */
+    flex-grow: 1; /* divides the area of parent into the equal equal parts  */
+    background-color: red;
+    border: 1px solid black;
+}
