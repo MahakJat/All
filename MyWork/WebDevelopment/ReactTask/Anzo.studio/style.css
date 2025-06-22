@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "font-1";
+    src: url(./file.woff2);
+}
+@font-face {
+    font-family: "font-2";
+    src: url(./file\ \(1\).woff2);
+}
+@font-face {
+    font-family: "font-3";
+    src: url(./file\ \(2\).woff2);
+}@font-face {
+    font-family: "font-4";
+    src: url(./file\ \(3\).woff2);
+}@font-face {
+    font-family: "font-5";
+    src: url(./file\ \(4\).woff2);
+}@font-face {
+    font-family: "made-for";
+    src: url(./madefor-text.var.original.woff2);
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+html,body {
+height: 100%;
+width: 100%;
+}
+body{
+    font-family: gilroy;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+}
+/* fixed page */
+#fixed-page{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding-top: 9vh;
+    padding-right: 6vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50vh;
+    z-index: 99999999999999;
+    pointer-events: none;
+}
+
+#fixed-page nav{
+ display:  flex;
+ width: 100%;
+ justify-content: flex-end;
+ align-items: center;
+}
+#fixed-page svg{
+    cursor: pointer;
+}
+#fixed-page nav button{
+    padding :2vh 6.5vh;
+    border-radius: 5vh;
+    border: 5px solid rgb(234, 225, 225);
+    background-color:  black;
+    color:rgba(255, 255, 255, 0.89);
+    font-size: 2.5vh;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    animation: animationButton;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+    animation-direction: alternate;
+    scale:0.9
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+#fixed-page nav button:hover{
+    background-color: #9B9B9B;
+}
+@keyframes animationButton {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.image-animation{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 100%;
+    align-items: flex-end;
+    margin-left: -5vh;
+}
+.image-animation img{
+    height: 11vh;
+    width: 11vh;
+    animation-name: imageRotation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes imageRotation {
+    from{
+          transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+#wrapper{
+    padding:2vh;
+}
+/* page - 1 */
+#page-1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;  
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://static.wixstatic.com/media/f1c650_678c0ceab5194893872c60fa3be4bcdc~mv2.jpg/v1/fill/w_1322,h_658,fp_0.69_0.64,q_85,usm_0.66_1.00_0.01,enc_auto/ANZO.jpg);
+    background-size: cover;
+    border-radius: 5vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.73);
+    padding: 5vh 10vh;
+   
+}
+.page-1-text{
+    color: rgba(255, 255, 255, 0.895);
+    font-family: gilroy;
+    font-weight: 500;    
+}
+#page-1 img{
+    margin-top: 3vh;
+}
+.page-1-text h1{
+    font-size: 2.6vh;
+}
+.page-1-text-h1{
+    font-weight: 300;
+    color: #5C5C5C;
+}
+#page{
+    height: 100%;
+    width: 100%;
+}
+.animation-text{
+    perspective: 700px;
+}
+.animation-text h1{
+    color: white;
+    font-size: 8vh;
+
+    font-weight: 800;
+    line-height: 0.9;
+    /* transform: rotateX(-50deg) ; */
+}
+.designer{
+    font-size: 15.5vh;
+}
+.darkmode{
+    color: black;
+}
+.animation-text sup{
+    font-size: 4vh;
+}
+
+/* section - 2 */
+.page-2-h1{
+    text-align:  center;
+    margin-top: 6vh;
+    color:#848484;
+    font-weight: 300;
+    font-size: 2.7vh;
+}
+.p-1{
+    text-align: center;
+   padding-top: 10vh;
+   perspective: 700px;
+}
+.p-1 div{
+    opacity: 1;
+}
+.p-1 h1{
+    text-transform: uppercase;
+    font-size: 41vw;
+    font-family: "font-5";
+    line-height: 0.8;
+}
